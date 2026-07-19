@@ -19,10 +19,20 @@ Features
 The app follows a clean separation of concerns:
 
 lib/
-├── models/ # Data models (CheckIn)
-├── services/ # Business logic (Storage, Location)
-├── screens/ # UI screens (Home, NewCheckIn, Detail)
-└── widgets/ # Reusable UI components (Cards, EmptyState)
+├── main.dart               
+├── models/
+│   └── check_in.dart         
+├── services/
+│   ├── storage_service.dart     
+│   └── location_service.dart    
+├── screens/
+│   ├── home_screen.dart         
+│   ├── new_check_in_screen.dart 
+│   └── detail_screen.dart       
+└── widgets/
+    ├── check_in_card.dart       
+    ├── empty_state.dart         
+    └── location_widget.dart     
 
 
 Why this structure?
@@ -56,20 +66,29 @@ uuid	        Unique ID generation
 
 UI Layouts
 ✅ Three screens: Home, New Check-In, Detail
+
 ✅ Navigation between screens
+
 ✅ Home shows list with thumbnail + note + timestamp
+
 ✅ Empty state when no data
+
 ✅ Note field with validation
+
 ✅ Photo button with preview
+
 ✅ Location button with loading state
+
 ✅ Save button
+
 ✅ Detail screen (read-only)
+
 ✅ Reusable UI components
 
 TestingVideos
 
 1. Windows
-   https://youtu.be/mWmz_GvKpmI
+   h[ttps://youtu.be/mWmz_GvKpmI](https://github.com/user-attachments/assets/196da8c5-dd5d-4917-823b-7b25d525632c)
 
 2. Android
-   https://youtube.com/shorts/SVSIVG3Sf_8?feature=share
+  [ https://youtube.com/shorts/SVSIVG3Sf_8?feature=share](https://github.com/user-attachments/assets/b4577f2a-993e-4fc5-a002-f1aae19815cd)
