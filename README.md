@@ -65,6 +65,7 @@ intl	        Date and time formatting
 uuid	        Unique ID generation
 
 UI Layouts
+
 ✅ Three screens: Home, New Check-In, Detail
 
 ✅ Navigation between screens
@@ -88,7 +89,7 @@ UI Layouts
 TestingVideos
 
 1. Windows
-   h[ttps://youtu.be/mWmz_GvKpmI](https://github.com/user-attachments/assets/196da8c5-dd5d-4917-823b-7b25d525632c)
+   [ttps://youtu.be/mWmz_GvKpmI](https://github.com/user-attachments/assets/196da8c5-dd5d-4917-823b-7b25d525632c)
 
 2. Android
   [ https://youtube.com/shorts/SVSIVG3Sf_8?feature=share](https://github.com/user-attachments/assets/b4577f2a-993e-4fc5-a002-f1aae19815cd)
