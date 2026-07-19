@@ -55,14 +55,13 @@ Steps
 4. flutter run
 
 Plugins Used
-
-Plugin	        Purpose
-image_picker    Camera and gallery access
-geolocator	    location services
-hive	        Local NoSQL database
-hive_flutter	Flutter integration for Hive
-intl	        Date and time formatting
-uuid	        Unique ID generation
+	      
+image_picker  -  Camera and gallery access
+geolocator	- location services
+hive  -   Local NoSQL database
+hive_flutter  -  Flutter integration for Hive
+intl  -  Date and time formatting
+uuid  -  Unique ID generation
 
 UI Layouts
 
