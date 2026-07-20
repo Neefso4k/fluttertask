@@ -74,11 +74,11 @@ class _DetailScreenState extends State<DetailScreen> {
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(
-        maxHeight: 400, // Prevents image from being too tall
+        maxHeight: 400, 
       ),
       child: Image.memory(
         widget.checkIn.photoBytes!,
-        fit: BoxFit.contain, // Changed from cover to contain!
+        fit: BoxFit.contain,
         errorBuilder: (context, error, stackTrace) {
           return Container(
             height: 250,
@@ -124,7 +124,6 @@ class _DetailScreenState extends State<DetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Note
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16),
@@ -150,7 +149,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Photo
+
             if (checkIn.photoBytes != null)
               Card(
                 child: Padding(
@@ -174,7 +173,6 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
             const SizedBox(height: 16),
 
-            // Location
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16),
@@ -200,7 +198,6 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Timestamp
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16),
