@@ -23,7 +23,6 @@ class CheckInCard extends StatelessWidget {
         curve: Curves.easeInOut,
         margin: const EdgeInsets.only(bottom: 12),
         decoration: BoxDecoration(
-          // Glassmorphism effect
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -49,7 +48,6 @@ class CheckInCard extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           child: Row(
             children: [
-              // Photo thumbnail
               _buildPhotoThumbnail(),
               const SizedBox(width: 12),
               Expanded(
@@ -133,7 +131,7 @@ class CheckInCard extends StatelessWidget {
         checkIn.photoBytes!,
         width: 60,
         height: 60,
-        fit: BoxFit.cover, // Keep cover for thumbnails (square crop looks good)
+        fit: BoxFit.cover,
         errorBuilder: (context, error, stackTrace) {
           return Container(
             width: 60,
