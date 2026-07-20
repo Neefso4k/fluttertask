@@ -12,7 +12,7 @@ class CheckIn {
   final String note;
 
   @HiveField(2)
-  final Uint8List? photoBytes;  // Changed from photoPath
+  final Uint8List? photoBytes; 
 
   @HiveField(3)
   final double latitude;
@@ -29,7 +29,7 @@ class CheckIn {
   CheckIn({
     required this.id,
     required this.note,
-    this.photoBytes,  // Changed from photoPath
+    this.photoBytes, 
     required this.latitude,
     required this.longitude,
     this.accuracy,
