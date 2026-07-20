@@ -3,7 +3,6 @@ import 'package:geolocator/geolocator.dart';
 class LocationService {
   Future<Map<String, dynamic>> getCurrentLocation() async {
     try {
-      // First, check if location services are enabled
       bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
         return {
@@ -13,10 +12,8 @@ class LocationService {
         };
       }
 
-      // Check permission status
       LocationPermission permission = await Geolocator.checkPermission();
 
-      // If permission is denied, request it
       if (permission == LocationPermission.denied) {
         permission = await Geolocator.requestPermission();
         if (permission == LocationPermission.denied) {
@@ -28,7 +25,6 @@ class LocationService {
         }
       }
 
-      // If permission is permanently denied
       if (permission == LocationPermission.deniedForever) {
         return {
           'success': false,
@@ -37,7 +33,6 @@ class LocationService {
         };
       }
 
-      // Get current position
       Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high,
         timeLimit: const Duration(seconds: 10),
