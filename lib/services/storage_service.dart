@@ -6,10 +6,8 @@ class StorageService {
   late Box<CheckIn> _box;
 
   Future<void> init() async {
-    // Open the box - this will work on all platforms
-    _box = await Hive.openBox<CheckIn>(boxName);
 
-    // Print how many items are in the box (for debugging)
+    _box = await Hive.openBox<CheckIn>(boxName);
     print('📦 Loaded ${_box.length} check-ins from storage');
   }
 
@@ -20,7 +18,6 @@ class StorageService {
 
   List<CheckIn> getAllCheckIns() {
     final all = _box.values.toList();
-    // Sort by timestamp (newest first)
     all.sort((a, b) => b.timestamp.compareTo(a.timestamp));
     print('📋 Found ${all.length} check-ins');
     return all;
@@ -41,6 +38,5 @@ class StorageService {
   }
 
   void dispose() {
-    // Hive.close();
   }
 }
