@@ -36,8 +36,6 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
     _noteController.dispose();
     super.dispose();
   }
-
-  // Take photo with camera
   Future<void> _takePhotoWithCamera() async {
     try {
       if (kIsWeb) {
@@ -66,8 +64,6 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
       );
     }
   }
-
-  // Pick image from gallery
   Future<void> _pickImageFromGallery() async {
     try {
       final XFile? photo = await _imagePicker.pickImage(
@@ -90,7 +86,6 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
     }
   }
 
-  // Show bottom sheet with options
   void _showImagePickerOptions() {
     showModalBottomSheet(
       context: context,
@@ -180,7 +175,6 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
         _locationError = result['error'];
         _locationPermissionDenied = result['permissionDenied'] ?? false;
 
-        // Show a more detailed error message
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(result['error'] ?? 'Failed to get location'),
@@ -290,7 +284,6 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Note Field
               Card(
                 color: Colors.white.withOpacity(0.08),
                 child: Padding(
@@ -310,8 +303,7 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-
-              // Photo Section
+              
               Card(
                 color: Colors.white.withOpacity(0.08),
                 child: Padding(
@@ -334,11 +326,11 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
                             Container(
                               width: double.infinity,
                               constraints: const BoxConstraints(
-                                maxHeight: 300, // Prevents image from being too tall
+                                maxHeight: 300, 
                               ),
                               child: Image.memory(
                                 _photoBytes!,
-                                fit: BoxFit.contain, // Changed from cover to contain!
+                                fit: BoxFit.contain,
                                 errorBuilder: (context, error, stackTrace) {
                                   return Container(
                                     height: 200,
@@ -395,7 +387,6 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Location Section
               Card(
                 color: Colors.white.withOpacity(0.08),
                 child: Padding(
@@ -411,7 +402,6 @@ class _NewCheckInScreenState extends State<NewCheckInScreen> {
               ),
               const SizedBox(height: 24),
 
-              // Save Button
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
