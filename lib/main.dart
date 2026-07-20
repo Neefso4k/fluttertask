@@ -6,17 +6,9 @@ import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize Hive with a proper storage directory
   await Hive.initFlutter();
-
-  // Register the adapter
   Hive.registerAdapter(CheckInAdapter());
-
-  // Open the box (this creates it if it doesn't exist)
   await Hive.openBox<CheckIn>('check_ins');
-
-  // Initialize storage service
   final storageService = StorageService();
   await storageService.init();
 
