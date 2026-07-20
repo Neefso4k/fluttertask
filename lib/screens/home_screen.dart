@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     super.initState();
     _loadCheckIns();
 
-    // Initialize animation controller for FAB
+    
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 2000),
@@ -46,17 +46,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Gradient Background
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFF0A0E27), // Deep dark blue (top left)
-              Color(0xFF1A1A3E), // Midnight blue
-              Color(0xFF2D1B4E), // Deep purple
-              Color(0xFF1A2A4A), // Dark navy
+              Color(0xFF0A0E27), 
+              Color(0xFF1A1A3E),
+              Color(0xFF2D1B4E), 
+              Color(0xFF1A2A4A), 
             ],
             stops: [0.0, 0.3, 0.6, 1.0],
           ),
@@ -64,7 +63,6 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         child: SafeArea(
           child: Column(
             children: [
-              // Custom App Bar with gradient text
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 child: Row(
@@ -100,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   ],
                 ),
               ),
-              // Main content
+          
               Expanded(
                 child: checkIns.isEmpty
                     ? const EmptyState()
@@ -130,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           ),
         ),
       ),
-      // Animated Floating Action Button with pulse animation
+      
       floatingActionButton: AnimatedBuilder(
         animation: _animationController,
         builder: (context, child) {
