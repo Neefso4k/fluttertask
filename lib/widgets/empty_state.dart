@@ -9,7 +9,6 @@ class EmptyState extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Animated icon container
           Container(
             padding: const EdgeInsets.all(30),
             decoration: BoxDecoration(
@@ -55,7 +54,6 @@ class EmptyState extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          // Animated hint button
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
